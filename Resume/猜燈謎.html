@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>猜燈謎</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script src="bootstrap-4.4.1-dist/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+    <link href="bootstrap-4.4.1-dist/bootstrap-4.4.1-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <style>
+        #Answer:hover {
+            opacity: 0.5;
+        }
+        .f1 {
+            width: 1510px;
+        }
+        .btn {
+            display: flex;
+            flex: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            border: solid;
+            border-width: 1px;
+            border-color: rgb(255,255,255);
+            outline: none;
+            background-color: rgba(255,208,0,0.815);
+            color: blue;
+            cursor: pointer;
+            padding: 20px;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            font-family: 標楷體;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#btnCheck").click(function () {
+                var ans = $("#txtAns").val();
+                var msg = "不對哦！！ 提示：一個很難見的現象。";
+                if (ans == "日全食") { msg = "答對啦！！ 解析：日全食(整天都有開)"; }
+                $("span").text(msg);
+            })
+            $("#txtAns").blur(function () {
+                $("#txtAns").css("background", "white");
+            })
+            $("#txtAns").focus(function () {
+                $("#txtAns").css("background", "yellow");
+            })
+        });
+
+        $(document).ready(function () {
+            $("#btnCheck1").click(function () {
+                var ans = $("#txtAns1").val();
+                var msg = "不對哦！！ 提示：生理現象。";
+                if (ans == "口水") { msg = "答對啦！！"; }
+                $("span1").text(msg);
+            })
+            $("#txtAns1").blur(function () {
+                $("#txtAns1").css("background", "white");
+            })
+            $("#txtAns1").focus(function () {
+                $("#txtAns1").css("background", "yellow");
+            })
+        });
+
+        $(document).ready(function () {
+            $("#btnCheck2").click(function () {
+                var ans = $("#txtAns2").val();
+                var msg = "不對哦！！ 提示：在台北市。";
+                if (ans == "天母") { msg = "答對啦！！"; }
+                $("span2").text(msg);
+            })
+            $("#txtAns2").blur(function () {
+                $("#txtAns2").css("background", "white");
+            })
+            $("#txtAns2").focus(function () {
+                $("#txtAns2").css("background", "yellow");
+            })
+        });
+
+        $(document).ready(function () {
+            $("#btnCheck3").click(function () {
+                var ans = $("#txtAns3").val();
+                var msg = "不對哦！！ 提示：下午茶那種的店。";
+                if (ans == "星巴克") { msg = "答對啦！！解析：星巴(八)克"; }
+                $("span3").text(msg);
+            })
+            $("#txtAns3").blur(function () {
+                $("#txtAns3").css("background", "white");
+            })
+            $("#txtAns3").focus(function () {
+                $("#txtAns3").css("background", "yellow");
+            })
+        });
+
+        $(document).ready(function () {
+            $("#btnCheck4").click(function () {
+                var ans = $("#txtAns4").val();
+                var msg = "不對哦！！ 提示：算是一個寢具。";
+                if (ans == "榻榻米") { msg = "答對啦！！"; }
+                $("span4").text(msg);
+            })
+            $("#txtAns4").blur(function () {
+                $("#txtAns4").css("background", "white");
+            })
+            $("#txtAns4").focus(function () {
+                $("#txtAns4").css("background", "yellow");
+            })
+        });
+
+        button = document.getElementById("btn");
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</head>
+
+<body style="background-color:#E9D9E0">
+    <header style="background-color:#E9D9E0">
+        <img src="猜燈謎標題列.png" alt="猜燈謎" title="Welcome,Wen-Xian 的猜燈謎." id="Answer" class="f1" />
+    </header>
+    <a href="B10717003-丁文賢.html" style=" color:deepskyblue; text-align:right; background-color:lightpink; font-family:標楷體; text-align:center; width:100px; height:30px" type="button" title="回首頁">回首頁</a>
+    <a href="履歷表.html" style=" color:deepskyblue; background-color:lightpink; font-family:標楷體; text-align:center; width:100px; height:30px" type="button" title="履歷表">履歷表</a>
+    <div class="container" style="margin-top:20px;">
+        <div class="card">
+            <div class="card-header bg-success">★ 燈謎ONE ★</div>
+            <div class="card-body">
+                <p>題目：餐廳二十四小時營業(天文學名詞)</p>
+                <p>答案：<input type="text" id="txtAns" /></p>
+                <p><input type="button" value="送出" id="btnCheck" /></p>
+                <span></span>
+            </div>
+            <div class="card-footer bg-warning"></div>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top:20px;">
+        <div class="card">
+            <div class="card-header bg-success">★ 燈謎TWO ★</div>
+            <div class="card-body">
+                <p>題目：什麼水取之不盡用之不竭？</p>
+                <p>答案：<input type="text" id="txtAns1" /></p>
+                <p><input type="button" value="送出" id="btnCheck1" /></p>
+                <span1></span1>
+            </div>
+            <div class="card-footer bg-warning"></div>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top:20px;">
+        <div class="card">
+            <div class="card-header bg-success">★ 燈謎THREE ★</div>
+            <div class="card-body">
+                <p>題目：玉皇大帝他娘(猜地名)</p>
+                <p>答案：<input type="text" id="txtAns2" /></p>
+                <p><input type="button" value="送出" id="btnCheck2" /></p>
+                <span2></span2>
+            </div>
+            <div class="card-footer bg-warning"></div>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top:20px;">
+        <div class="card">
+            <div class="card-header bg-success">★ 燈謎FOUR ★</div>
+            <div class="card-body">
+                <p>題目：星星有幾克？(猜一店名)</p>
+                <p>答案：<input type="text" id="txtAns3" /></p>
+                <p><input type="button" value="送出" id="btnCheck3" /></p>
+                <span3></span3>
+            </div>
+            <div class="card-footer bg-warning"></div>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top:20px;">
+        <div class="card">
+            <div class="card-header bg-success">★ 燈謎FIVE ★</div>
+            <div class="card-body">
+                <p>題目：什麼米不能吃？(猜物品)</p>
+                <p>答案：<input type="text" id="txtAns4" /></p>
+                <p><input type="button" value="送出" id="btnCheck4" /></p>
+                <span4></span4>
+            </div>
+            <div class="card-footer bg-warning"></div>
+        </div>
+    </div>
+    <footer style="text-align:center; font-family:Calibri">
+        copyright ©2020 Wen-Xian. all rights reserved.<br />
+        <p><audio src="張碧晨-My Way.mp3" controls="controls" /></p>
+    </footer>
+    <p><button onclick="topFunction()" class="btn" title="Go to top">回到頂端</button></p>
+</body>
+</html>
